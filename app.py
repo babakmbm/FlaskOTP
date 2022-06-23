@@ -23,9 +23,9 @@ app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 #app.config['MAIL_DEBUG'] = True
-app.config['MAIL_USERNAME'] = 'otpghazal@gmail.com'
-app.config['MAIL_PASSWORD'] = 'ghazalotp123'
-app.config['MAIL_DEFAULT_SENDER'] = 'otpghazal@gmail.com'
+app.config['MAIL_USERNAME'] = '-'
+app.config['MAIL_PASSWORD'] = '-'
+app.config['MAIL_DEFAULT_SENDER'] = '-'
 app.config['MAIL_MAX_EMAILS'] = None
 #app.config['MAIL_SUPRESS_SEND'] = False
 app.config['MAIL_ASCII_ATTACHMENTS'] = False
@@ -75,7 +75,6 @@ def create_connection():
         #print("connection has been made to the DB!")
     except Error as e:
         print(e)
-
     return conn
 
 
@@ -349,7 +348,6 @@ def QR_two_factor_setup():
             'Cache-Control': 'no-cache, no-store, must-revalidate',
             'Pragma': 'no-cache',
             'Expires': '0'}
-
 
 
 def set_otp_secret(email, phone):
